@@ -15,6 +15,9 @@ export default defineConfig({
     setupFiles: ['./src/testing/test-setup.ts'],
     globals: true,
     exclude: ['**/node_modules/**', '**/.next/**', 'e2e/**'],
+    coverage: {
+      reporter: ['text', 'lcov', 'json'],
+    },
   },
   resolve: {
     alias: {
